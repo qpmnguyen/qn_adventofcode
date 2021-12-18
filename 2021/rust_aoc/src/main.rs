@@ -4,6 +4,7 @@ use std::io::BufReader;
 use std::io::BufRead;
 use rust_aoc::day1; 
 use rust_aoc::day2; 
+use rust_aoc::day3;
 
 fn main() {
     let args: Vec<String> = env::args().collect();
@@ -38,6 +39,15 @@ fn main() {
         println!("Multiplier for pt.1 is {}", total_pt1);
         println!("Test pt 2 are {}", t_pt2);
         println!("Multiplier for pt.2 is {}", total_pt2);
+    } else if query == "day3" {
+        let t_case: Vec<String> = vec!["00100", "11110", "10110", 
+                                        "10111", "10101", "01111",
+                                        "00111", "11100", "10000",
+                                        "11001", "00010", "01010"].iter()
+                                        .map(|x| x.to_string()).collect();
+        let test_string = &t_case[0];
+        println!("Stuff is {:#?}", test_string.chars())
+        
     }
 }
 
